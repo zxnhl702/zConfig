@@ -1,0 +1,15 @@
+- 
+  key: actDataFilenameTemplate12
+  value: "test14d3f"
+- 
+  key: fileRoot
+  value: public/upload/pic1
+- key: fileRootUrl
+  value: /upload1/pic/
+  sub:
+    - 
+      key: filehotRootUrl
+      value: hots1/
+    - 
+      key: filevideoRootUrl
+      value: videos1/

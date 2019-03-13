@@ -1,0 +1,46 @@
+# 配置文件
+# http配置
+http: 
+  # 服务端口号
+  port: 
+    - 11067
+# https配置
+https: 
+  # 服务端口号
+  port: 
+    - 11048
+  # 证书路径
+  certFile: ''
+  # 私钥路径
+  keyFile: ''
+# 数据库配置
+database:
+  - 
+    key: default
+    type: sqlite3
+    driver: sqlite3
+    host: ./middle.db
+    port: 0
+    user: ''
+    pwd: ''
+    instance: ''
+    mode: wal
+# 常量配置 一个key 一个value 如果有子配置项的话还有sub 之下也是key和value
+consts:
+  actDataFilenameTemplat: "%s基层党组织组织生活信息录入情况统计表--%s.xlsx"
+  sheetName: 数据导出
+  excelStyleTitle: '{
+        "alignment":{"horizontal":"center","vertical":"center","wrap_text":true}, 
+        "font": {"bold": true, "size":14},
+        "border":[{"type":"left","style":1,"color":"000000"},
+          {"type":"top","style":1,"color":"000000"},
+          {"type":"bottom","style":1,"color":"000000"},
+          {"type":"right","style":1,"color":"000000"}]
+        }'
+  excelStartColumnIndex: A
+  excelEndColumnIndex: I
+  excelExportTimeColumnIndex: H
+  imgRootUrl:
+    root: /upload/pic/
+    hotRootUrl: hots/
+    videoRootUrl: videos/
