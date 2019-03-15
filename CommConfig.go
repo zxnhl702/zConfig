@@ -2,6 +2,7 @@ package zConfig
 
 import (
     "encoding/json"
+    "errors"
     "path"
     "strings"
 
@@ -40,4 +41,12 @@ func parseCommConfig(data []byte, ext string) (*CommConfig, error) {
         return &c, ErrUnkownConfigFile
     }
     return &c, err
+}
+
+// Map 配置文件转换成map[string]interface{}
+func (c *CommConfig)Map() (map[string]interface{}, error) {
+    if m, ok := (c.config).(map[string]interface{}); ok {
+        return m, nil
+    }
+    return nil, errors.New("类型转换错误")
 }
