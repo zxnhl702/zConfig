@@ -30,9 +30,12 @@ func NewServiceConfig(configFilePath string) (*ServiceConfig, error) {
     }
     // 解析配置文件
     c, err := parseConfig(data, ext)
+    if nil != err {
+        return nil, err
+    }
     // 生成配置文件中的常量
     c.Configs = getConfigs(c)
-    return c, err
+    return c, nil
 }
 
 // parseConfig 解析配置文件数据
