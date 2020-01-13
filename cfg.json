@@ -1,0 +1,36 @@
+{
+    "http": {
+        "port": [11067]
+    },
+    "https": {
+        "port": [11048],
+        "certFile": "",
+        "keyFile": ""
+    },
+    "database": [
+        {
+            "key": "default",
+            "type": "sqlite3",
+            "driver": "sqlite3",
+            "host": "./middle.db",
+            "port": 0,
+            "user": "",
+            "pwd": "",
+            "instance": "",
+            "mode": "wal"
+        }
+    ],
+    "consts": {
+        "actDataFilenameTemplat": "%s基层党组织组织生活信息录入情况统计表--%s.xlsx",
+        "sheetName": "数据导出",
+        "excelStyleTitle": "1111",
+        "excelStartColumnIndex": "A",
+        "excelEndColumnIndex": "I",
+        "excelExportTimeColumnIndex": "H",
+        "imgRootUrl": { 
+            "root": "/upload/pic/",
+            "hotRootUrl": "hots/",
+            "videoRootUrl": "videos/" 
+        } 
+    }
+}
