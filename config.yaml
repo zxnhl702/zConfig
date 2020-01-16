@@ -25,6 +25,34 @@ database:
     pwd: ''
     instance: ''
     mode: wal
+# RabbitMQ配置
+rabbitMQ:
+  # 是否启动rabbitMQ true:启动 false:不启用
+  on: false
+  # rabbitMQ的服务器配置
+  server:
+    -
+      # rabbitMQ连接的用户名
+      user: 'test'
+      # rabbitMQ连接的密码
+      pwd: 'test'
+      # rabbitMQ连接的服务器主机名或者IP地址
+      host: 'develop.test.com'
+      # rabbitMQ连接的端口
+      port: 5672
+      # rabbitMQ的exchange配置
+      exchanges:
+        -
+          # exchange的名字
+          name: 'log_direct'
+          # exchange的类型 fanout direct topic headers 4类
+          kind: 'topic'
+          # queue的名称 不填/空 会自动生成 推荐不填
+          queuename: ''
+          # exchange和queue绑定的路由 可以有多个 即多个路由都会把配置的exchange和queue绑定到一起
+          routingKeys:
+            - 'test.*'
+            - 'test2'
 # 常量配置 一个key 一个value 如果有子配置项的话还有sub 之下也是key和value
 consts:
   - 

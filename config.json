@@ -1,0 +1,70 @@
+{
+    "http": {
+        "port": [11067]
+    },
+    "https": {
+        "port": [11048],
+        "certFile": "",
+        "keyFile": ""
+    },
+    "database": [
+        {
+            "key": "default",
+            "type": "sqlite3",
+            "driver": "sqlite3",
+            "host": "./middle.db",
+            "port": 0,
+            "user": "",
+            "pwd": "",
+            "instance": "",
+            "mode": "wal"
+        }
+    ],
+    "rabbitMQ": {
+        "on": false,
+        "server": [
+            {
+                "user": "test",
+                "pwd": "test",
+                "host": "develop.test.com",
+                "port": 5672,
+                "exchanges": [
+                    {
+                        "name": "log_direct",
+                        "kind": "topic",
+                        "queuename": "",
+                        "routingKeys": ["test.*", "test3"]
+                    }
+                ]
+            }
+        ]
+    },
+    "consts": [
+        {
+            "key": "activeJWT",
+            "value": "0"
+        },
+        {
+            "key": "tokenKey",
+            "value": "xinlantech1234567890"
+        },
+        {
+            "key": "imgRoot",
+            "value": "public/upload/pic"
+        },
+        {
+            "key": "imgRootUrl",
+            "value": "/upload/pic/",
+            "sub": [
+                {
+                    "key": "hotRootUrl",
+                    "value": "hots/"
+                },
+                {
+                    "key": "videoRootUrl",
+                    "value": "videos/"
+                }
+            ]
+        }
+    ]
+}

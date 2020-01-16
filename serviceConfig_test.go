@@ -31,3 +31,27 @@ func TestConfig2(t *testing.T) {
     }
     log.Println(cfg)
 }
+
+func TestConfig3(t *testing.T) {
+    // 读取配置文件
+    cfg, err := NewServiceConfig("config.yaml")
+    if nil != err {
+        log.Println(err)
+        return
+    }
+    log.Println(cfg.RabbitMQ.On)
+    log.Println(cfg.RabbitMQ.Server[0].Exchanges[0])
+    log.Println(cfg.RabbitMQ.Server[0].Exchanges[0].RoutingKeys)
+}
+
+func TestConfig4(t *testing.T) {
+    // 读取配置文件
+    cfg, err := NewServiceConfig("config.json")
+    if nil != err {
+        log.Println(err)
+        return
+    }
+    log.Println(cfg.RabbitMQ.On)
+    log.Println(cfg.RabbitMQ.Server[0].Exchanges[0])
+    log.Println(cfg.RabbitMQ.Server[0].Exchanges[0].RoutingKeys)
+}
