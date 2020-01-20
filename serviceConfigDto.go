@@ -45,6 +45,7 @@ type RabbitMQServer struct {
     Pwd         string                  `json:"pwd" yaml:"pwd"`                 // 密码
     Host        string                  `json:"host" yaml:"host"`               // 主机名 IP地址
     Port        int                     `json:"port" yaml:"port"`               // 端口号
+    KeyPre      string                  `json:"routingKeyPre" yaml:"routingKeyPre"` // 路由统一前缀 没有为空
     Exchanges   []*RabbitMQExchange     `json:"exchanges" yaml:"exchanges"`     // rabbitMQ 交换器
 }
 // RabbitMQExchange rabbitMQ的交换器配置

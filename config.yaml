@@ -40,6 +40,8 @@ rabbitMQ:
       host: 'develop.test.com'
       # rabbitMQ连接的端口
       port: 5672
+      # 路由统一前缀 没有为空
+      routingKeyPre: ''
       # rabbitMQ的exchange配置
       exchanges:
         -

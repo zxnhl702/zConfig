@@ -28,6 +28,7 @@
                 "pwd": "test",
                 "host": "develop.test.com",
                 "port": 5672,
+                "routingKeyPre": "",
                 "exchanges": [
                     {
                         "name": "log_direct",
